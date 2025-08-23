@@ -1,8 +1,11 @@
 package com.example.fastCurve.controller;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,6 +45,12 @@ public class EmployeeController {
 	}
 	
 //	@DeleteMapping
+	
+	@GetMapping("/api/getPaymentOptionOfUser")
+	public ResponseEntity<List<String>> getPaymentOption(){
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(Arrays.asList("Go TO Bank","Use AtM near by"));
+	}
 	
 	
 	
