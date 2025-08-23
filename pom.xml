@@ -54,15 +54,21 @@
 		</dependency>
 
 		<!-- Adding dependecy for Externalising the config data-->
-		
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 
+		<!-- Adding dependency for making this discovery client-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
 	</dependencies>
 
-<!--added by me-->
+	<!--added by me-->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
